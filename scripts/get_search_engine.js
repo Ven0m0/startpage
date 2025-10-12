@@ -49,9 +49,9 @@ function highlightMatchingLinks() {
 	links.forEach(link => {
 		const linkText = link.textContent.toLowerCase();
 		if (!linkText.includes(query)) {
-			link.style.color = 'var(--color-foreground-2)';
+			link.style.color = 'var(--drx-color-deactivate)';
 		} else {
-			link.style.color = 'var(--color-foreground-1)';
+			link.style.color = 'var(--drx-color-text)';
 		}
 	});
 }
@@ -72,6 +72,7 @@ document.addEventListener('keydown', function(event) {
 
 document.addEventListener('DOMContentLoaded', function() {
 	const shortcuts = {
+		'Druxorey': 'https://druxorey.github.io/',
 		'Arch Wiki': 'https://wiki.archlinux.org/',
 		'Calendar': 'https://calendar.google.com/calendar/u/0/r',
 		'Campus Virtual': 'https://campusvirtualucv.org/ead/login/index.php',
@@ -127,6 +128,10 @@ document.addEventListener('DOMContentLoaded', function() {
 		} else if (query.startsWith('i:')) {
 			const searchQuery = query.substring(2);
 			window.location.href = `https://www.google.com/search?tbm=isch&q=${encodeURIComponent(searchQuery)}`;
+
+		} else if (query.startsWith('a:')) {
+			const searchQuery = query.substring(2);
+			window.location.href = `https://wiki.archlinux.org/index.php?search=${encodeURIComponent(searchQuery)}`;
 
 		} else {
 			const shortcut = Object.keys(shortcuts).find(key => key.toLowerCase().includes(query));
