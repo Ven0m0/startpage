@@ -1,17 +1,19 @@
 body[theme="dracula-dark"] {
-	--drx-color-base: #1E1F29;
-	--drx-color-surface: #282A36;
-	--drx-color-overlay: #44475A;
-	--drx-color-highlight: #525568;
+  --drx-color-base: #1e1f29;
+  --drx-color-surface: #282a36;
+  --drx-color-overlay: #44475a;
+  --drx-color-highlight: #525568;
 
-	--drx-color-text: #F8F8F2;
-	--drx-color-subtext: #BABCC9;
-	--drx-color-deactivate: #707487;
+  --drx-color-text: #f8f8f2;
+  --drx-color-subtext: #babcc9;
+  --drx-color-deactivate: #707487;
 
-	--drx-color-accent: #BD93F9;
-	--drx-color-important: #D6ACFF;
-	--drx-color-settings: #BD93F93F;
+  --drx-color-accent: #bd93f9;
+  --drx-color-important: #d6acff;
+  --drx-color-settings: #bd93f93f;
 
-    --drx-button-inactive: brightness(0) saturate(100%) invert(94%) sepia(3%) saturate(436%) hue-rotate(34deg) brightness(100%) contrast(94%);
-    --drx-button-active: brightness(0) saturate(100%) invert(73%) sepia(41%) saturate(3824%) hue-rotate(211deg) brightness(99%) contrast(97%);
+  --drx-button-inactive: brightness(0) saturate(100%) invert(94%) sepia(3%)
+    saturate(436%) hue-rotate(34deg) brightness(100%) contrast(94%);
+  --drx-button-active: brightness(0) saturate(100%) invert(73%) sepia(41%)
+    saturate(3824%) hue-rotate(211deg) brightness(99%) contrast(97%);
 }

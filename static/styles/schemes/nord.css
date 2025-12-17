@@ -1,17 +1,19 @@
 body[theme="nord"] {
-	--drx-color-base: #2E3440;
-	--drx-color-surface: #3B4252;
-	--drx-color-overlay: #434C5E;
-	--drx-color-highlight: #4C566A;
+  --drx-color-base: #2e3440;
+  --drx-color-surface: #3b4252;
+  --drx-color-overlay: #434c5e;
+  --drx-color-highlight: #4c566a;
 
-	--drx-color-text: #ECEFF4;
-	--drx-color-subtext: #D8DEE9;
-	--drx-color-deactivate: #616E88;
+  --drx-color-text: #eceff4;
+  --drx-color-subtext: #d8dee9;
+  --drx-color-deactivate: #616e88;
 
-	--drx-color-accent: #81A1C1;
-	--drx-color-important: #88C0D0;
-	--drx-color-settings: #81A1C13F;
+  --drx-color-accent: #81a1c1;
+  --drx-color-important: #88c0d0;
+  --drx-color-settings: #81a1c13f;
 
-    --drx-button-inactive: brightness(0) saturate(100%) invert(94%) sepia(3%) saturate(1107%) hue-rotate(187deg) brightness(98%) contrast(87%);
-    --drx-button-active: brightness(0) saturate(100%) invert(65%) sepia(39%) saturate(286%) hue-rotate(169deg) brightness(90%) contrast(90%);
+  --drx-button-inactive: brightness(0) saturate(100%) invert(94%) sepia(3%)
+    saturate(1107%) hue-rotate(187deg) brightness(98%) contrast(87%);
+  --drx-button-active: brightness(0) saturate(100%) invert(65%) sepia(39%)
+    saturate(286%) hue-rotate(169deg) brightness(90%) contrast(90%);
 }
