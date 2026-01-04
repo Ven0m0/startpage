@@ -1,19 +1,19 @@
 body[theme="catppuccin"] {
-  --drx-color-base: #181825;
-  --drx-color-surface: #1e1e2e;
-  --drx-color-overlay: #313244;
-  --drx-color-highlight: #45475a;
+	--drx-color-base: #181825;
+	--drx-color-surface: #1e1e2e;
+	--drx-color-overlay: #313244;
+	--drx-color-highlight: #45475a;
 
-  --drx-color-text: #cdd6f4;
-  --drx-color-subtext: #a6adc8;
-  --drx-color-deactivate: #6c7086;
+	--drx-color-text: #cdd6f4;
+	--drx-color-subtext: #a6adc8;
+	--drx-color-deactivate: #6c7086;
 
-  --drx-color-accent: #cba6f7;
-  --drx-color-important: #f2cdcd;
-  --drx-color-settings: #cba6f73f;
+	--drx-color-accent: #cba6f7;
+	--drx-color-important: #f2cdcd;
+	--drx-color-settings: #cba6f73f;
 
-  --drx-button-inactive: brightness(0) saturate(100%) invert(74%) sepia(8%)
-    saturate(701%) hue-rotate(190deg) brightness(94%) contrast(90%);
-  --drx-button-active: brightness(0) saturate(100%) invert(78%) sepia(47%)
-    saturate(1323%) hue-rotate(199deg) brightness(92%) contrast(111%);
+	--drx-button-inactive: brightness(0) saturate(100%) invert(74%) sepia(8%)
+		saturate(701%) hue-rotate(190deg) brightness(94%) contrast(90%);
+	--drx-button-active: brightness(0) saturate(100%) invert(78%) sepia(47%)
+		saturate(1323%) hue-rotate(199deg) brightness(92%) contrast(111%);
 }
