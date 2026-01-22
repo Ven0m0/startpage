@@ -11,7 +11,7 @@ This is a personalized startpage, designed to be your browser homepage. It inclu
 - **Progressive Web App (PWA)**: Install as a standalone app on any device
 - **Offline Support**: Works without internet connection via service worker caching
 - **Customizable Search**: Choose between Brave, Google, and DuckDuckGo
-- **Multiple Color Schemes**: Dracula Dark/Light, Gruvbox, Nord, and Catppuccin
+- **Multiple Color Schemes**: Dracula Dark, Gruvbox, Nord, and Catppuccin
 - **Keyboard Shortcuts**: Quick navigation without touching the mouse
 - **Lightweight**: Optimized performance with minimal resource usage
 
