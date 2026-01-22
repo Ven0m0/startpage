@@ -90,10 +90,20 @@ function updateCustomShortcutsList() {
 	shortcuts.forEach((shortcut, index) => {
 		const item = document.createElement("div");
 		item.className = "custom-shortcut-item";
-		item.innerHTML = `
-			<span>${shortcut.name}</span>
-			<button onclick="deleteCustomShortcut(${index})">Delete</button>
-		`;
+
+		const nameSpan = document.createElement("span");
+		nameSpan.textContent = shortcut.name;
+
+		const deleteButton = document.createElement("button");
+		deleteButton.type = "button";
+		deleteButton.textContent = "Delete";
+		deleteButton.addEventListener("click", function () {
+			deleteCustomShortcut(index);
+		});
+
+		item.appendChild(nameSpan);
+		item.appendChild(deleteButton);
+
 		listContainer.appendChild(item);
 	});
 }
@@ -124,14 +134,26 @@ function renderCustomShortcuts() {
 		);
 	}
 
-	// Build shortcuts HTML
-	let html = "<ul><li>~/custom </li>";
-	shortcuts.forEach((shortcut) => {
-		html += `<li><a href="${shortcut.url}">${shortcut.name}</a></li>`;
-	});
-	html += "</ul>";
+	// Clear existing content
+	container.innerHTML = "";
 
-	container.innerHTML = html;
+	// Build shortcuts list using DOM APIs to avoid HTML injection
+	const list = document.createElement("ul");
+
+	const baseItem = document.createElement("li");
+	baseItem.textContent = "~/custom ";
+	list.appendChild(baseItem);
+
+	shortcuts.forEach((shortcut) => {
+		const li = document.createElement("li");
+		const link = document.createElement("a");
+		link.href = shortcut.url;
+		link.textContent = shortcut.name;
+		li.appendChild(link);
+		list.appendChild(li);
+	});
+
+	container.appendChild(list);
 }
 
 // Initialize on page load
