@@ -157,6 +157,116 @@ li:first-child {
 	outline: none;
 }
 
+.widget-toggles {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+	padding: 1rem;
+	background-color: var(--drx-color-overlay);
+	border-radius: var(--drx-border-radius-small);
+}
+
+.widget-toggles label {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	cursor: pointer;
+	color: var(--drx-color-text);
+}
+
+.widget-toggles input[type="checkbox"] {
+	cursor: pointer;
+	width: 1rem;
+	height: 1rem;
+}
+
+.shortcut-management {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+	padding: 1rem;
+	background-color: var(--drx-color-overlay);
+	border-radius: var(--drx-border-radius-small);
+	max-height: 300px;
+	overflow-y: auto;
+}
+
+.shortcut-input {
+	padding: 0.5rem;
+	background-color: var(--drx-color-base);
+	color: var(--drx-color-text);
+	border: 1px solid var(--drx-color-highlight);
+	border-radius: var(--drx-border-radius-small);
+	font-size: 0.9rem;
+}
+
+.shortcut-input:focus {
+	outline: none;
+	border-color: var(--drx-color-accent);
+}
+
+.settings-button {
+	padding: 0.5rem 1rem;
+	background-color: var(--drx-color-accent);
+	color: var(--drx-color-base);
+	border: none;
+	border-radius: var(--drx-border-radius-small);
+	cursor: pointer;
+	font-weight: bold;
+	transition: var(--drx-transition-speed) ease;
+}
+
+.settings-button:hover {
+	opacity: 0.8;
+	transition: var(--drx-transition-speed) ease;
+}
+
+#custom-shortcuts-list {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+	margin-top: 0.5rem;
+}
+
+.custom-shortcut-item {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0.5rem;
+	background-color: var(--drx-color-base);
+	border-radius: var(--drx-border-radius-small);
+	font-size: 0.85rem;
+}
+
+.custom-shortcut-item span {
+	color: var(--drx-color-text);
+}
+
+.custom-shortcut-item button {
+	padding: 0.25rem 0.5rem;
+	background-color: var(--drx-color-important);
+	color: var(--drx-color-base);
+	border: none;
+	border-radius: var(--drx-border-radius-small);
+	cursor: pointer;
+	font-size: 0.75rem;
+}
+
+#custom-shortcuts-container {
+	display: grid;
+	grid-column: 1 / -1;
+	margin-bottom: 1rem;
+}
+
+#custom-shortcuts-container ul {
+	margin: 0;
+}
+
+#custom-shortcuts-container li:first-child {
+	color: var(--drx-color-accent);
+	font-weight: 600;
+}
+
 #settings-display {
 	display: flex;
 	position: absolute;
