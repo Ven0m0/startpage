@@ -31,6 +31,13 @@ self.addEventListener('fetch', event => {
   event.respondWith(
     caches.match(event.request)
       .then(response => response || fetch(event.request))
+      .catch(error => {
+        console.error('Service worker fetch handler failed:', error);
+        return new Response('Service unavailable', {
+          status: 503,
+          statusText: 'Service Unavailable'
+        });
+      })
   );
 });
 
