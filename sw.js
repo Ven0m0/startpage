@@ -22,7 +22,21 @@
 self.addEventListener('install', event => {
   event.waitUntil(
     caches.open(CACHE_NAME)
-      .then(cache => cache.addAll(urlsToCache))
+      .then(cache => {
+        // Cache each URL individually so that one failure doesn't break the entire install.
+        return Promise.all(
+          urlsToCache.map(url =>
+            cache.add(url).catch(error => {
+              // Log and skip problematic resources to allow partial caching.
+              console.error('Failed to cache resource during install:', url, error);
+            })
+          )
+        );
+      })
+      .catch(error => {
+        // Log any unexpected errors during the install caching phase.
+        console.error('Service worker install failed during caching step:', error);
+      })
       .catch(err => console.error('Service worker installation failed:', err))
   );
 });
