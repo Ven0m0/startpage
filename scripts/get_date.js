@@ -14,7 +14,6 @@ function showTime() {
 
 	document.getElementById("date-display").innerHTML =
 		`${today}, ${hour}:${minute}:${second} | ${day}/${month}/${year}`;
-	setTimeout(showTime, 0);
 }
 
 function addZero(i) {
@@ -23,3 +22,4 @@ function addZero(i) {
 }
 
 showTime();
+setInterval(showTime, 1000);
