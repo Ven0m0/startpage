@@ -2,7 +2,7 @@ function hideSettings() {
 	document.getElementById("settings-container").style.display = "none";
 }
 
-function _showSettings() {
+function showSettings() {
 	document.getElementById("settings-container").style.display = "flex";
 }
 
@@ -24,7 +24,7 @@ function loadSavedSearchEngine() {
 	if (savedSearchEngine) {
 		searchEngine.value = savedSearchEngine;
 	} else {
-		searchEngine.value = "https://duckduckgo.com/";
+		searchEngine.value = "https://search.brave.com/search";
 	}
 	changeSearchEngine();
 }
@@ -66,7 +66,7 @@ document.addEventListener("keydown", (event) => {
 
 async function loadShortcuts() {
 	const yamlUrl =
-		"https://raw.githubusercontent.com/druxorey/dotfiles/refs/heads/main/config/brave/bookmarks.yaml";
+		"https://raw.githubusercontent.com/Ven0m0/dotfiles/refs/heads/main/config/brave/bookmarks.yaml";
 	try {
 		const response = await fetch(yamlUrl);
 		const yamlText = await response.text();

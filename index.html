@@ -21,6 +21,8 @@
           <div class="settings-options">
             <h1>Search Engine</h1>
             <h1>Colorscheme</h1>
+            <h1>Widget Visibility</h1>
+            <h1>Custom Shortcuts</h1>
           </div>
 
           <div class="settings-options">
@@ -45,6 +47,20 @@
               <option value="nord">Nord</option>
               <option value="catppuccin">Catppuccin</option>
             </select>
+
+            <div class="widget-toggles">
+              <label><input type="checkbox" id="toggle-title" onchange="toggleWidget('title')" checked> Title</label>
+              <label><input type="checkbox" id="toggle-date" onchange="toggleWidget('date')" checked> Date</label>
+              <label><input type="checkbox" id="toggle-image" onchange="toggleWidget('image')" checked> Image</label>
+              <label><input type="checkbox" id="toggle-icons" onchange="toggleWidget('icons')" checked> Icons</label>
+            </div>
+
+            <div class="shortcut-management">
+              <input type="text" id="shortcut-name" placeholder="Name" class="shortcut-input">
+              <input type="text" id="shortcut-url" placeholder="URL" class="shortcut-input">
+              <button onclick="addCustomShortcut()" class="settings-button">Add Shortcut</button>
+              <div id="custom-shortcuts-list"></div>
+            </div>
           </div>
         </div>
 
@@ -86,7 +102,7 @@
 
       <ul>
         <li>~/personal </li>
-        <li><a href="https://github.com/druxorey">GitHub</a></li>
+        <li><a href="https://github.com/Ven0m0">GitHub</a></li>
         <li><a href="https://modrinth.com/dashboard">Modrinth</a></li>
         <li><a href="https://www.ivanime.com/">Ivanime</a></li>
         <li><a href="https://myanimelist.net/">MyAnimeList</a></li>
@@ -103,20 +119,8 @@
         <li><a href="https://devhints.io/">DevHints</a></li>
       </ul>
       <ul>
-        <li>~/academic 拾</li>
-        <li><a href="https://conest.ciens.ucv.ve/webapp/">Conest</a></li>
-        <li><a href="https://portalasig2.ciens.ucv.ve/#/">PortalAsig2</a></li>
-        <li>
-          <a href="https://campusvirtualucv.org/ead/login/index.php"
-            >Campus Virtual</a
-          >
-        </li>
-        <li><a href="https://correo.ciens.ucv.ve">CiensMail</a></li>
-        <li><a href="https://notebooklm.google.com/">NotebookLM</a></li>
-      </ul>
-      <ul>
         <li>~/linux </li>
-        <li><a href="https://github.com/druxorey/dotfiles">Dotfiles</a></li>
+        <li><a href="https://github.com/Ven0m0/dotfiles">Dotfiles</a></li>
         <li><a href="https://wiki.archlinux.org/">Arch Wiki</a></li>
         <li><a href="https://explainshell.com/#">Explain Shell</a></li>
         <li><a href="https://chat.deepseek.com">DeepSeek</a></li>
@@ -130,7 +134,7 @@
 
     <div id="image-container">
       <div id="image-box">
-        <a href="https://druxorey.github.io/" id="image-link-box"
+        <a href="https://Ven0m0.github.io/" id="image-link-box"
           ><img id="image-display" alt="fem" src="static/images/img.webp"
         /></a>
       </div>
@@ -158,6 +162,7 @@
     <script type="text/javascript" src="scripts/get_date.js"></script>
     <script type="text/javascript" src="scripts/get_search_engine.js"></script>
     <script type="text/javascript" src="scripts/set_colorscheme.js"></script>
+    <script type="text/javascript" src="scripts/customization.js"></script>
     <script>
       if ('serviceWorker' in navigator) {
         navigator.serviceWorker.register('sw.js')
