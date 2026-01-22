@@ -3,10 +3,15 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A minimal, customizable browser startpage with search and quick links" />
+    <meta name="theme-color" content="#282a36" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <title>~/startpage</title>
     <link rel="stylesheet" href="static/styles/style.css" />
     <link id="colorscheme-style" rel="stylesheet" href="" />
     <link rel="icon" href="static/icons/icon.svg" type="image/x-icon" />
+    <link rel="manifest" href="manifest.json" />
   </head>
 
   <body>
@@ -140,25 +145,11 @@
             alt="Calendar Icon"
           />
         </a>
-        <a href="https://drive.proton.me/u/0/" class="svg-container">
-          <img
-            src="static/icons/proton-drive.svg"
-            class="svg-icon"
-            alt="Tasks Icon"
-          />
-        </a>
         <a href="https://drive.google.com/drive/my-drive" class="svg-container">
           <img
             src="static/icons/google-drive.svg"
             class="svg-icon"
             alt="Drive Icon"
-          />
-        </a>
-        <a href="https://www.notion.so/" class="svg-container">
-          <img
-            src="static/icons/notion.svg"
-            class="svg-icon"
-            alt="Notion Icon"
           />
         </a>
       </div>
@@ -167,5 +158,12 @@
     <script type="text/javascript" src="scripts/get_date.js"></script>
     <script type="text/javascript" src="scripts/get_search_engine.js"></script>
     <script type="text/javascript" src="scripts/set_colorscheme.js"></script>
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/sw.js')
+          .then(reg => console.log('Service Worker registered'))
+          .catch(err => console.log('Service Worker registration failed'));
+      }
+    </script>
   </body>
 </html>

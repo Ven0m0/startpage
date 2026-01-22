@@ -1,0 +1,18 @@
+{
+  "name": "Startpage",
+  "short_name": "Startpage",
+  "description": "A minimal, customizable browser startpage with search and quick links",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#282a36",
+  "theme_color": "#282a36",
+  "orientation": "any",
+  "icons": [
+    {
+      "src": "static/icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
