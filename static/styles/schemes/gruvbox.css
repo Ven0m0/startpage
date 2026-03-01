@@ -10,9 +10,10 @@ body[theme="gruvbox"] {
 
 	--drx-color-accent: #d65d0e;
 	--drx-color-important: #fe8019;
-	--drx-color-settings: #d65d0e3F;
+	--drx-color-settings: #d65d0e3f;
 
-    --drx-button-inactive: brightness(0) saturate(100%) invert(87%) sepia(4%) saturate(1698%) hue-rotate(3deg) brightness(92%) contrast(90%);
-    --drx-button-active: brightness(0) saturate(100%) invert(41%) sepia(84%) saturate(840%) hue-rotate(350deg) brightness(87%) contrast(101%);
+	--drx-button-inactive: brightness(0) saturate(100%) invert(87%) sepia(4%)
+		saturate(1698%) hue-rotate(3deg) brightness(92%) contrast(90%);
+	--drx-button-active: brightness(0) saturate(100%) invert(41%) sepia(84%)
+		saturate(840%) hue-rotate(350deg) brightness(87%) contrast(101%);
 }
-
