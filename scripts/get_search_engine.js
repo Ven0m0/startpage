@@ -116,6 +116,9 @@ document.addEventListener("DOMContentLoaded", async () => {
 		} else if (query.startsWith("g:")) {
 			const searchQuery = query.substring(2);
 			window.location.href = `https://www.github.com/search/?q=${encodeURIComponent(searchQuery)}`;
+		} else if (query.startsWith("y:")) {
+			const searchQuery = query.substring(2);
+			window.location.href = `https://www.youtube.com/results?search_query=${encodeURIComponent(searchQuery)}`;
 		} else if (query.startsWith("i:")) {
 			const searchQuery = query.substring(2);
 			window.location.href = `https://www.google.com/search?tbm=isch&q=${encodeURIComponent(searchQuery)}`;
