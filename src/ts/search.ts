@@ -32,11 +32,18 @@ export function getSavedSearchEngine(): string {
 function applyDefaultPlaceholder(inputElement: HTMLInputElement): void {
 	const engineUrl = getSavedSearchEngine();
 	let engineName = 'Google';
-	if (engineUrl.includes('duckduckgo.com')) {
-		engineName = 'DuckDuckGo';
-	} else if (engineUrl.includes('search.brave.com')) {
-		engineName = 'Brave Search';
+
+	try {
+		const hostname = new URL(engineUrl).hostname.toLowerCase();
+		if (hostname === 'duckduckgo.com') {
+			engineName = 'DuckDuckGo';
+		} else if (hostname === 'search.brave.com') {
+			engineName = 'Brave Search';
+		}
+	} catch {
+		// Keep default when URL is invalid.
 	}
+
 	inputElement.placeholder = `Search with ${engineName}`;
 }
 
